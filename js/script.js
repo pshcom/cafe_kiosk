@@ -406,7 +406,7 @@ orderBtn.addEventListener('click', () => {
    }
 
    modalPlace.textContent = Place === '매장' ? '🪑 매장에서 드십니다' : '🛍️ 포장 주문입니다';
-   modalNumber.textContent = String(orderNumber).padStart(3, '0'); // 1 -> "001"
+   modalNumber.textContent = String(orderNo).padStart(3, '0'); // 1 -> "001"
 
    receipt.innerHTML = '';
    cart.forEach(item => {
@@ -429,7 +429,7 @@ orderBtn.addEventListener('click', () => {
 
    modal.classList.add('show');
 
-   orderNumber++; // 다음 손님은 다음 번호
+   orderNo++; // 다음 손님은 다음 번호
    cart = []; // 장바구니 비우기
    saveState();
    renderCart();
